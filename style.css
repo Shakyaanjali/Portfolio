@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Lato:ital,wght@0,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Josefin+Sans:wght@400;500;700&family=Lato:ital,wght@0,400;1,900&display=swap');
+
+/* font-family: 'Caveat', cursive;
+/* font-family: 'Josefin Sans', sans-serif; */
+
+:root{
+    --lighting-color: #f5b441; ;
+    --dark-color: #a78e05;
+    --darker-color: #63480e;
+    --secondary-color: #f1ff73;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+body,html{
+    color: white;
+font-weight: 300;
+line-height: 1.4;
+scroll-behavior: smooth;
+}
+body{
+    font-size: 1.4rem;
+}
+a{
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif; 
+    color: black;
+}
+ul{
+    list-style-type: none;
+}
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+header{
+background-color: var(--lighting-color)
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+nav h1{
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    font-weight: 800;
+    color: black;
+}
+nav ul li{
+    font-size: 1.9rem;
+     transition: 0.2s ease-in-out;
+        border-bottom: 0.2rem solid transparent;
+}
+nav ul li:hover{
+   border-bottom: 0.2rem solid var(--secondary-color);
+   transition: 0.2s ease-in-out;
+}
+ 
+#hero{
+    background-color: var(--darker-color);
+    padding: 4rem 0;
+    border-bottom: 5px solid var(--lighting-color);
+}
+#hero .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.hero-content{
+    display: grid;
+    place-items: center;
+}
+#hero h1{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.hi-text{
+    font-size: 6rem;
+    color: var(--secondary-color);
+}
+.name-text{
+    font-size: 5rem;
+}
+#hero h2{
+    font-family: 'Caveat', cursive;
+    font-size: 5rem;
+
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 4s steps(40, end),blink-caret 0.75s step-end infinite;
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to {
+        width: 45%;
+    }
+}
+@keyframes blink-caret{
+    from,
+    to{
+        border-color: transparent;
+    }
+    45%{
+        border-color: orange;
+    }
+}
+
+           /* project section */
+
+#project{
+    background-color: var(--darker-color);
+}
+#project h2{
+    font-size: 6rem;
+    color: white;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 2rem 0;
+}
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px,4fr));
+}
+.box-item{
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    background-blend-mode: hard-light;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+    box-shadow: 1px 1px 15px #898557;
+    border: 2px solid rgb(225 220 44);
+}
+.card:hover{
+    transform: scale(1.05);
+    transition: 0.8s ease-in-out;
+    background-color: #d1d1d178;
+    box-shadow: 0 0 20px rgb(239, 253, 159)
+}
+.card:hover img{
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+ 
+}
+.card:hover .card-content{
+    background-color: var(--lighting-color);
+    color: rgb(0, 0, 0);
+    transform: translateY(0px);
+}
+.card-content{
+    padding: 2rem;
+    position: relative;
+    top: -6.5rem;
+    margin-bottom:-6.5rem;
+    transition: 0.5s ease-in-out;
+    transform: translateY(100px);
+}
+.card-content h3{
+   text-align: center;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 19px;
+}
+
+/* contact section */
+
+#contact{
+    background-color: var(--dark-color);
+}
+#contact h2{
+    font-size: 5.5rem;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgb(31, 31, 31);
+}
+#contact .container{
+    height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.top-contact{
+    display: grid;
+    margin: 0 auto;
+    max-width: 800px;
+    grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+    gap: 2rem;
+}
+.contact-way{
+    display: flex;
+    gap: 1rem;
+     align-items: center;
+}
+.contact-way h3{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Caveat', cursive;
+    color: rgb(31, 31, 31);
+}
+.Bottom-contact{
+    display: grid;
+    margin: 0 auto;
+    max-width: 800px;
+    grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+    gap: 2rem;
+}
+                    /* footer */
+footer{
+    background-color: var(--darker-color);
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:1.9rem;
+}
+
+
+ /* REsposive website */
+
+ @media (max-width: 964px) {
+   html{
+      font-size: 50%; 
+    }
+    #hero .container{
+        display: flex;
+        flex-direction: column;
+       }
+       #contact .container{
+        height: 50vh;}
+ }
+ @media (max-width: 500px) {
+    html{
+       font-size: 40%; 
+     }
+ .hero-img{
+    display: grid;
+    place-items: center;
+ }
+ #contact .container{
+    height: 40vh;}
+  }
+ 
